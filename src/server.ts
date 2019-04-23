@@ -1,10 +1,15 @@
-import {ServerAPI} from "./serverModule";
+import * as Express from 'express';
+import auth from './routes/auth';
+import user from './routes/user';
 
-class Main {
-    constructor(){
-        const serverAPI = new ServerAPI();
-        serverAPI.bootServer();
-    }
-}
+const app = Express();
 
-const main = new Main();
+app.use('/auth', auth);
+app.use('/user', user);
+
+
+app.listen(5000, () => {
+  console.log('Listen on port 5000.');
+});
+
+export default app;

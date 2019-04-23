@@ -5,20 +5,29 @@ const entries = glob.sync('./src/*.ts');
 
 module.exports = {
   mode: 'production',
+  //mode: 'development',
   entry: entries,
   output: {
     filename: 'server.js',
     path: path.join(__dirname, 'dist')
   },
+  
   devtool: 'source-map',
+  
   resolve: {
-    extensions: ['.ts', '.js', '.json']
+    extensions: ['.ts', '.js', '.json'],
   },
+  
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    port:5000
+  },
+  
   module:{
     rules:[
       {
         test: /\.ts$/,
-        loader: 'awesome-typescript-loader'
+        loader: 'ts-loader'
       },
       {
         enforce: 'pre',
