@@ -69,3 +69,5 @@ typings/
 .config
 .bashrc
 .npm-packages
+dist/
+

@@ -1,4 +1,4 @@
-import {ServerAPI} from "./modules/serverModule";
+import {ServerAPI} from "./serverModule";
 
 class Main {
     constructor(){
