@@ -1,0 +1,26 @@
+{
+  "name": "mngmoney",
+  "version": "1.0.0",
+  "description": "簡単な給与管理ツールを node + typescript にて",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cresta522/AllowanceManagement.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cresta522/AllowanceManagement/issues"
+  },
+  "homepage": "https://github.com/cresta522/AllowanceManagement#readme",
+  "devDependencies": {
+    "typescript": "^3.4.4"
+  },
+  "dependencies": {
+    "@types/node": "^11.13.7"
+  }
+}
