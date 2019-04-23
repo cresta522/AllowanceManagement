@@ -68,3 +68,4 @@ typings/
 .viminfo
 .config
 .bashrc
+.npm-packages
