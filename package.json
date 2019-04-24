@@ -6,10 +6,7 @@
   "scripts": {
     "build": "rm -rf dist && webpack --mode=development",
     "dev-sv": "node ./dist/server.js",
-    "start": "forever start -w ./dist/server.js",
-    "restart:b": "rm -rf dist && webpack --mode=development && forever restart ./dist/server.js",
-    "restart": "forever restart -w ./dist/server.js",
-    "stop": "forever stop ./dist/server.js"
+    "start": "nodemon ./dist/server.js"
   },
   "repository": {
     "type": "git",
