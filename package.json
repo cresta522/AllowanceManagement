@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "build": "rm -rf dist && webpack --mode=development",
-    "dev-sv": "node ./dist/server.js",
-    "start": "nodemon ./dist/server.js"
+    "dev:s": "node ./dist/server.js",
+    "start": "nodemon -L"
   },
   "repository": {
     "type": "git",
