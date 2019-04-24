@@ -9,18 +9,22 @@ module.exports = {
   entry: entries,
   output: {
     filename: 'server.js',
-    path: path.join(__dirname, 'dist')
+    path: path.join(__dirname, './dist'),
+    publicPath: '/',
   },
   
   devtool: 'source-map',
   
   resolve: {
-    extensions: ['.ts', '.js', '.json'],
+    extensions: ['.ts', '.js', '.json']
   },
   
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port:5000
+    port: 5000,
+    disableHostCheck: true,
+    inline: false,
+    filename: 'server.js',
   },
   
   module:{

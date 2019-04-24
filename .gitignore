@@ -70,4 +70,5 @@ typings/
 .bashrc
 .npm-packages
 dist/
-
+.vim/
+.forever/
