@@ -1,13 +1,23 @@
-import * as Express from 'express';
+'use strict';
+
 import auth from './routes/auth';
 import user from './routes/user';
 
-const app = Express();
+const express = require('express');
+const app = express();
+const http = require('http');
+const server = http.Server(app);
+
+const PORT = process.env.PORT || 5000;
+
+// public dir
+app.use(express.static('public'));
+// app.use(express.static(__dirname + 'public'));
 
 app.use('/auth', auth);
 app.use('/user', user);
 
-app.listen(5000, () => {
+server.listen(PORT, () => {
   console.log('Listen on port 5000.');
 });
 

@@ -1,5 +1,5 @@
 {
     "watch": ["src"],
     "ext": "ts",
-    "exec": "webpack --mode=development && node ./dist/server.js"
+    "exec": "webpack --mode=development && node ./public/dist/server.js"
 }

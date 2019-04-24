@@ -1,5 +1,6 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const glob = require('glob');
 const entries = glob.sync('./src/*.ts');
 
@@ -8,8 +9,8 @@ module.exports = {
   //mode: 'development',
   entry: entries,
   output: {
-    filename: 'server.js',
-    path: path.join(__dirname, './dist'),
+    filename: 'server.js?[hash]',
+    path: path.join(__dirname, './public/dist'),
     publicPath: '/',
   },
   
